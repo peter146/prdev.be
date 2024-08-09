@@ -1,0 +1,302 @@
+/* navbar */
+
+header .container { /* Ensure the header and navbar use flexbox for alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    width: 100%;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    flex: 1; /* Allow the menu to grow and fill available space */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 10px; /* Adjust spacing between menu items */
+}
+
+
+/*index.html + general*/
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEEFE6;
+    font-size: 0.8rem;
+}
+
+header {
+    font-size: 1rem;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+#logoPR {
+    width: 75px;
+    height: auto;
+    border-radius: 30px;
+}
+
+#toggleMobileMenu {
+    color: #143109;
+}
+
+#button-chatgpt {
+    border-radius: 0.75rem;
+    background-color: #347595;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+
+#button-chatgpt:hover {
+    background-color: #EEEFE6;
+    color: #347595;
+    box-shadow:0 0.75rem 1rem 0 rgba(0,0,0,0.24), 0 1.063rem 3.125rem 0 rgba(0,0,0,0.19)
+}
+
+#button-dsm {
+    text-decoration: none;
+    color:black;
+    border-radius: 0.75rem;
+    background-color: #347595;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin:0.5rem;
+}
+
+#button-dsm:hover {
+    text-decoration: none;
+    background-color: #EEEFE6;
+    color: #347595;
+    box-shadow:0 0.75rem 1rem 0 rgba(0,0,0,0.24), 0 1.063rem 3.125rem 0 rgba(0,0,0,0.19)
+}
+
+#button-dsm:active {
+    transform: translateY(0.188rem);
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    /*aligns buttons next to each other*/
+    display: flex;
+    justify-content: center; /*center the buttons horizontally*/
+    gap: 1rem; /* space between buttons */
+    margin-bottom: 1rem; /* space below the buttons */
+}
+
+.text-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/*index.html - widgets*/
+
+.widgets {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+#widget-yr1, #widget-yr2, #widget-weerenradar1, #widget-weerenradar2 {
+    border-radius: 0.625rem;
+    margin: 1em;
+}
+
+
+/*prdev.html*/
+
+.table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.table th {
+    padding-left: 0.625rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table td {
+    padding-left: 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width:25%;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width:60%;
+}
+
+/*boodschappen.html*/
+
+.container-boodschappen {
+    width: 100%;
+    min-height: 100vh;
+    background: #EEEFE6;
+    padding: 10px;
+}
+
+.boodschappen-app{
+    width: 100%;
+    max-width: 540px;
+    background: whitesmoke;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+
+.boodschappen-app h2 {
+    color: #bb3a3a;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#boodschappen-icoon {
+    width: 30px;
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+#boodschappen-button {
+    display: inline;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    background: #bb3a3ab9;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#container-lijst li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#container-lijst li::before {
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+#container-lijst li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+#container-lijst li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+#container-lijst li span{
+    position: absolute;
+    right:0;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#container-lijst li span:hover {
+    background: darkgrey;
+}
