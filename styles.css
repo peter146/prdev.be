@@ -300,3 +300,12 @@ input {
 #container-lijst li span:hover {
     background: darkgrey;
 }
+
+
+/* support */
+
+.center-on-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
