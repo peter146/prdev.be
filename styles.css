@@ -1,79 +1,37 @@
-/* base styles for mobile devices */
-body {
-    background: #EEEFE6;
-    font-size: 0.7rem;
-    padding: 10px;
-    margin: 0;
-}
+/* navbar */
 
-.container {
+header .container { /* Ensure the header and navbar use flexbox for alignment */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.column {
-    width: 100%;
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    flex: 1; /* Allow the menu to grow and fill available space */
 }
 
-/* base styles for tablet and above */
-@media (min-width: 768px) {
-    body {
-        background: #EEEFE6;
-        font-size: 0.7rem;
-        padding: 20px;
-    }
-    .column {
-        width: 48%;
-        float: left;
-        margin-right: 2%;
-    }
-    .column:last-child {
-        margin-right: 0;
-    }
-    .container {
-        flex-direction: row;
-    }
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-menu.show {
-        display: flex;
-    }
-
-    .nav-item {
-        margin: 0;
-        border-bottom: 1px solid #e1e1e1;
-    }
-
-    .nav-link {
-        padding: 15px;
-        display: block;
-    }
-
-    .navbar-toggler {
-        display: block;
-    }
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* base styles for desktop and above */
-@media (min-width: 1024px) {
-    body {
-        background: #EEEFE6;
-        font-size: 0.8rem;
-        padding: 30px;
-    }
-    .container {
-        flex-direction: row;
-    }
+.nav-item {
+    margin: 0 10px; /* Adjust spacing between menu items */
 }
 
-/* general - all pages */
+
+/*index.html + general*/
 
 *{
     margin:0;
@@ -82,31 +40,9 @@ body {
     box-sizing: border-box;
 }
 
-.hidden {
-    display: none;
-}
-
-.main {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-section {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.center-on-page {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-}
-
-.img {
-    max-width: 100%;
-    height: auto;
+body {
+    background: #EEEFE6;
+    font-size: 0.8rem;
 }
 
 header {
@@ -152,73 +88,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #143109;
 }
 
-
-/* navbar */
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e1e1e1;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-}
-
-#logoPR {
-    height: 40px;
-}
-
-.hidden {
-    display: none;
-}
-
-.navbar-toggler {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-}
-
-.navbar-menu {
-    display: flex;
-}
-
-.navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.nav-item {
-    margin: 0 10px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #000;
-    padding: 10px 15px;
-}
-
-.nav-link.active {
-    font-weight: bold;
-}
-
-.nav-link:hover {
-    background-color: #e1e1e1;
-    border-radius: 4px;
-}
-
-/*buttons*/
-
 #button-chatgpt {
     border-radius: 0.75rem;
     background-color: #347595;
@@ -254,6 +123,17 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0.188rem);
 }
 
+.hidden {
+    display: none;
+}
+
+.main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .button-container {
     /*aligns buttons next to each other*/
     display: flex;
@@ -262,17 +142,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem; /* space below the buttons */
 }
 
-#boodschappen-button {
-    display: inline;
-    border: none;
-    outline: none;
-    padding: 15px 20px;
-    background: #bb3a3ab9;
-    border-radius: 20px;
-    color: whitesmoke;
-    font-size: 16px;
-    cursor: pointer;
+.text-section {
+    text-align: center;
+    margin-top: 2rem;
 }
+
 
 /*index.html - widgets*/
 
@@ -367,6 +241,18 @@ input {
     font-weight: 14px;
 }
 
+#boodschappen-button {
+    display: inline;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    background: #bb3a3ab9;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 #container-lijst li {
     list-style: none;
     font-size: 17px;
@@ -413,4 +299,13 @@ input {
 
 #container-lijst li span:hover {
     background: darkgrey;
+}
+
+
+/* support */
+
+.center-on-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
 }

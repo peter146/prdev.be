@@ -1,9 +1,3 @@
-// general
-function toggleMenu() {
-    const menu = document.getElementById('toggleMobileMenu');
-    menu.classList.toggle('show');
-}
-
 //prdev.html
 
 $(document).ready(function(){
