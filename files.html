@@ -1,9 +1,37 @@
 <!DOCTYPE html>
-<html>
-<p>files.html</p>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css?v20240821-1">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".toggle").on("click", function() {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="https://prdev.be/"><img src="images/logoPR.png" alt="logoPR" id="logoPR"></a></li>
+            <li class="item"><a href="index.html">home</a></li>
+            <li class="item"><a href="prdev.html">prdev</a></li>
+            <li class="item"><a href="support.html">support</a></li>
+            <li class="item"><a href="files.html">bestanden</a></li>
+            <li class="item"><a href="e-learning.html">e-learning</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <main>
+    <p>CONTENT</p>
+    </main>
+</body>
 </html>
-<!--
-    upload files without login?
-    redirect to file station
-    share large files (wetransfer system)
--->

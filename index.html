@@ -1,83 +1,39 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles.css?v=20240812-2">
+    <link rel="stylesheet" type="text/css" href="styles.css?v20240821-1">
     <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".toggle").on("click", function() {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+        });
+    </script>
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-sm navbar-light">
-                <a href="https://prdev.be/" class="navbar-brand">
-                    <img src="images/logoPR.png" alt="logoPR" id="logoPR" class="d-inline-block align-top">
-                    <span class="hidden">Dashboard</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="toggleMobileMenu">
-                    <ul class="navbar-nav">
-                        <li class = "nav-item">
-                            <a class="nav-link active" href="index.html" target="_self">home</a>
-                        </li>
-                        <li class = "nav-item">
-                            <a class="nav-link" href="prdev.html" target="_self">prdev</a>
-                        </li>
-                        <!-- <li>
-                            <a class="nav-link" href="boodschappen.html" target="_self">Boodschappen</a>
-                        </li class = "nav-item"> -->
-                        <li class = "nav-item">
-                            <a class="nav-link" href="support.html" target="_self">support</a>
-                        </li>
-                        <!-- <li class = "nav-item">
-                            <a class="nav-link" href="calendar.html" target="_self">Agenda</a>
-                        </li> -->
-                        <li class = "nav-item">
-                            <a class="nav-link" href="https://quickconnect.to/peterrosa/file"
-                                target="_blank">bestanden</a>
-                        </li>
-                        <li class = "nav-item">
-                            <a class="nav-link" href="https://quickconnect.to/peterrosa/note"
-                                target="_blank">notities</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="https://prdev.be/"><img src="images/logoPR.png" alt="logoPR" id="logoPR"></a></li>
+            <li class="item"><a href="index.html">home</a></li>
+            <li class="item"><a href="prdev.html">prdev</a></li>
+            <li class="item"><a href="support.html">support</a></li>
+            <li class="item"><a href="files.html">bestanden</a></li>
+            <li class="item"><a href="e-learning.html">e-learning</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
     <main>
-        <div class="button-container">
-            <a href="https://github.com/peter146" id="button-dsm" target="_blank">GitHub</a>
-        </div>
-        <div class="widgets">
-            <iframe
-                src="https://api.wo-cloud.com/content/widget/?geoObjectKey=16383251&language=nl&region=BE&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius"
-                name="CW2" scrolling="no" width="290" height="318" frameborder="0" id="widget-weerenradar1" style="border: 1px solid #10658E">
-            </iframe>
-            <iframe
-                src="https://api.wo-cloud.com/content/widget/?geoObjectKey=8997672&language=nl&region=BE&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius"
-                name="CW2" scrolling="no" width="290" height="318" frameborder="0" id="widget-weerenradar2" style="border: 1px solid #10658E">
-            </iframe>
-        </div>
-        <div class="widgets">
-            <iframe src="https://www.yr.no/en/content/2-2787048/card.html" name="YR1" height="385" width="370"
-                scrolling="no" id="widget-yr1">
-            </iframe>
-            <iframe src="https://www.yr.no/en/content/2-3114566/card.html" name="YR1" height="385" width="370"
-                scrolling="no" id="widget-yr2">
-            </iframe>
+        <div class="base-button-div prdev-button-div">
+            <button class="button-base button-small"><a href="https://github.com/peter146" target="_blank">GitHub</a></button>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 </body>
 </html>

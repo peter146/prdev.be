@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css?v20240821-1">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".toggle").on("click", function() {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="https://prdev.be/"><img src="images/logoPR.png" alt="logoPR" id="logoPR"></a></li>
+            <li class="item"><a href="index.html">home</a></li>
+            <li class="item"><a href="prdev.html">prdev</a></li>
+            <li class="item"><a href="support.html">support</a></li>
+            <li class="item"><a href="files.html">bestanden</a></li>
+            <li class="item"><a href="e-learning.html">e-learning</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="base-button-div e-learning-button-div">
+
+            <button class="button-base button-large"><a href="https://www.udemy.com/join/login-popup/?locale=en_US&response_type=html&next=https%3A%2F%2Fwww.udemy.com%2F" target="_blank">udemy</a></button>
+
+            <button class="button-base button-large"><a href="https://www.sololearn.com/profile/21600290" target="_blank">Sololearn</a></button>
+
+            <button class="button-base button-large"><a href="https://service.nha.nl/?_gl=1*mdqe27*_gcl_au*MTQ2NDM4MTQ2Ni4xNzIzMjAzMTg3*_ga*MTQwMzEzOTA1MS4xNzIzMjAzMTg4*_ga_NEERSETGN3*MTcyMzUzMzQ2Ny40LjAuMTcyMzUzMzQ2Ny42MC4wLjA" target="_blank">NHA</a></button>
+
+            <button class="button-base button-large"><a href="https://www.youtube.com/" target="_blank">YouTube</a></button>
+            
+            <button class="button-base button-large"><a href="https://eu.pythonanywhere.com/user/prdev/" target="_blank">Python Anywhere</a></button>
+
+        </div>
+    </main>
+</body>
+</html>
+
