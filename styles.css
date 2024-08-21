@@ -92,13 +92,13 @@ a:hover {
   font-size: 1.2rem;
 }
 
-.base-button:hover {
+.button-base:hover {
   border-color: red;
   font-weight: bolder;
   text-decoration: none;
 }
 
-.base-button a:hover {
+.button-base a:hover {
   text-decoration: none;
   font-weight: bold;
 }
