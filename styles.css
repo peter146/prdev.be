@@ -53,6 +53,11 @@ a:hover {
   padding: 0 1rem;
 }
 
+.base-button-div a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .prdev-button-div {
   height: 2rem;
   max-height: 2rem;
@@ -97,12 +102,6 @@ a:hover {
   font-weight: bolder;
   text-decoration: none;
 }
-
-.button-base a:hover {
-  text-decoration: none;
-  font-weight: bold;
-}
-
 
 /*table mobile*/
 .content-table {
