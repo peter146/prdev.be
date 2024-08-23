@@ -103,6 +103,52 @@ a:hover {
   text-decoration: none;
 }
 
+/*quote on index.html*/
+.quote-container {
+  margin:0;
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.quote-container .quote {
+  max-width: 50rem;
+  position: relative;
+}
+
+.quote-container .quote-icon {
+  position: absolute;
+  left: -2.5rem;
+  top: -2rem;
+  opacity: 0.1;
+  transform: rotateZ(4deg);
+}
+
+.quote-container .quote-content {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgba(1, 65, 9, 0.897);
+}
+
+.quote-container .quote-author {
+  font-size: 1rem;
+  color: solid grey;
+  border-top: 0.2rem solid grey;
+  padding: 1rem 2rem;
+  margin-top: 0.8rem;
+}
+
+.quote-container .new-quote-btn {
+  padding: 0.2rem 0.2rem;
+  position: fixed;
+
+}
+
 /*table mobile*/
 .content-table {
   border-collapse: collapse;
