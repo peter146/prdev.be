@@ -119,6 +119,9 @@ a:hover {
 .quote-container .quote {
   max-width: 50rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .quote-container .quote-icon {
@@ -144,9 +147,20 @@ a:hover {
 }
 
 .quote-container .new-quote-btn {
+  margin-top: 2rem;
   padding: 0.2rem 0.2rem;
-  position: fixed;
+  background:rgba(1, 65, 9, 0.897);
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
 
+.quote-container .new-quote-btn:hover {
+  background: grey;
 }
 
 /*table mobile*/
